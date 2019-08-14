@@ -1,0 +1,41 @@
+/*
+Author: KWG
+Date Created: (YYMMDD) 190814
+Date Compiled: (YYMMDD) 190814
+
+Desciption: Input two products, quantity and price and display total price.
+
+Algorithm
+Step 1: Declare my variables: itemOne[20], itemTwo[20], qtyOne, qtyTwo, priceOne, priceTwo;
+Step 2: Input prompt: read input for declared variables;
+Step 3: Display total price;
+*/
+
+#include <stdio.h>
+
+int main (){
+	char itemOne[20],itemTwo[20];
+	int qtyOne,qtyTwo;
+	float priceOne, priceTwo;
+	
+	printf("* SUM OF TWO PRODUCTS *\n");
+	printf("Type name of first product: ");
+	scanf("%s",&itemOne);
+	printf("Type quantity of first product: ");
+	scanf("%d",&qtyOne);
+	printf("Type price of one for first product: ");
+	scanf("%f",&priceOne);
+	
+	printf("\nType name of second product: ");
+	scanf("%s",&itemTwo);
+	printf("Type quantity of second product: ");
+	scanf("%d",&qtyTwo);
+	printf("Type price of one for second product: ");
+	scanf("%f",&priceTwo);
+	
+	printf("\nTotal price of %s: %.2f PHP", itemOne, (qtyOne*priceOne));
+	printf("\nTotal price of %s: %.2f PHP", itemTwo, (qtyTwo*priceTwo));
+	printf("\nTotal price of both products: %.2f PHP", (qtyOne*priceOne)+(qtyTwo*priceTwo));
+	
+	return 0;
+}

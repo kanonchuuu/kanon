@@ -1,0 +1,61 @@
+/*
+Author: KWG
+Date Created: (YYMMDD) 190807
+Date Compiled: (YYMMDD) 190807
+Function: Display: Area of 5 shapes.
+*/
+#include <stdio.h>
+
+int main()
+{
+	float input1, input2, input3;
+	printf("* MATH: Display area of a 1. Square, 2. Rectangle, 3. Triangle, 4. Parallelogram, 5. Trapezoid\n");
+	printf("* * * * * * *\n");
+
+	printf("1. SQUARE\n");
+	printf("Area of Square: Side * Side\n");
+	printf("Input length of a side: \n");
+	scanf("%f", &input1);
+	printf("SQUARE: AREA: %.1f\n", (input1*input1));
+	printf("* * * * * * *\n\n");
+
+	printf("2. RECTANGLEE\n");
+	printf("Area of Rectangle: Base * Height\n");
+	printf("Input length of base: \n");
+	scanf("%f", &input1);
+	printf("Input length of height: \n");
+	scanf("%f", &input2);
+	printf("RECTANGLE: AREA: %.1f\n", (input1*input2));
+	printf("* * * * * * *\n\n");
+
+	printf("3. TRIANGLE\n");
+	printf("Area of Triangle: 0.5*(Base*Height)\n");
+	printf("Input length of base: \n");
+	scanf("%f", &input1);
+	printf("Input length of height: \n");
+	scanf("%f", &input2);
+	printf("TRIANGLE: AREA: %.1f\n", (0.5 * (input1*input2)));
+	printf("* * * * * * *\n\n");
+
+	printf("4. PARALLELOGRAM\n");
+	printf("Area of Parallelogram: Base*Height\n");
+	printf("Input length of base: \n");
+	scanf("%f", &input1);
+	printf("Input length of height: \n");
+	scanf("%f", &input2);
+	printf("PARALLELOGRAM: AREA: %.1f\n", (input1*input2));
+	printf("* * * * * * *\n\n");
+
+	printf("5. TRAPEZOID\n");
+	printf("Area of Trapezoid: Height*((Base1+Base2)/2)\n");
+	printf("Input length of first base: \n");
+	scanf("%f", &input1);
+	printf("Input length of second base: \n");
+	scanf("%f", &input2);
+	printf("Input length of height: \n");
+	scanf("%f", &input3);
+	printf("TRAPEZOID: AREA: %.1f\n", (input3*((input2 + input3) / 2)));
+	printf("* * * * * * *\n");
+
+	return 0;
+}

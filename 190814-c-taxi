@@ -1,0 +1,43 @@
+/*
+Author: KWG
+Date created: (YYMMDD) 190731
+Date compiled: (YYMMDD) 190807
+
+Desc: Function: Taxi Fare Program
+*/
+
+#include <stdio.h>
+
+int getFare(int x);
+
+int main() {
+	int input;
+
+	printf("* CALCULATE TAXI FARE: \n");
+	printf("* BASE FARE (up to 5 km): 50 PHP\n");
+	printf("* ADDITIONAL COST (every 1 km after 5 km): 6 PHP\n");
+	printf("Input distance to calculate: \n");
+	printf("...or input 0 to exit. \n");
+	scanf("%d", &input);
+	if (input == 0)
+	{
+		return 0;
+	}
+	getFare(input);
+
+	return 0;
+}
+
+int getFare(int x) {
+	if (x <= 5) {
+		printf("Your total distance is: %d \n", x);
+		printf("Your total fare is: 50 \n");
+		return 0;
+	}
+	else if (x > 5) {
+		printf("Your total distance is: %d \n", x);
+		printf("Additional distance (chargeable): %d \n", (x - 5));
+		printf("Your total fare is: %d \n", (((x - 5) * 6) + 50));
+		return 0;
+	}
+}

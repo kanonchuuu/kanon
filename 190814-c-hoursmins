@@ -1,0 +1,29 @@
+/*
+Author: KWG
+Date Created: (YYMMDD) 190814
+Date Compiled: (YYMMDD) 190814
+
+Desciption: Convert hours and minutes input into total minutes.
+
+Algorithm
+Step 1: Declare my variables: int hourInput, minuteInput;
+Step 2: Input Prompt: read input from hourInput, minuteInput;
+Step 3: Display conversion result;
+*/
+
+#include <stdio.h>
+
+int main(){
+	int hourInput;
+	int minuteInput;
+	
+	printf("* CONVERT HOURS AND MINUTES TO TOTAL MINUTES *\n");
+	printf("Enter hours to convert: ");
+	scanf("%d",&hourInput);
+	printf("Enter minutes: ");
+	scanf("%d",&minuteInput);
+	
+	printf("Converted total minutes: %d", (hourInput*60)+minuteInput);
+	
+	return 0;		
+}

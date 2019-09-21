@@ -1,0 +1,30 @@
+#include <stdio.h>
+int binC(); // written by Kanon >w< 190921
+void main() {
+	int x = 0, y = 128;
+	char mainCh = 'a'; // placeholder char 'a'
+
+	// print binary of char without bitwise operator '<<': (1 << x)
+	for (;x <= 7;x++) {
+		putchar(mainCh & y ? '1' : '0');
+		y /= 2;
+	}
+
+	printf("\nbinC = %c\n", binC());
+}
+// return dec value (to be printed as char) of binary digits input
+int binC() {
+	int dec = 0, x = 0; char binC[9] = "01110000"; // placeholder binary digits of char 'p': 01110000
+	for (; x < 8; x++) { switch (x) {
+		case 0:	if (binC[x] == '1') { dec += 128; } break;
+		case 1:	if (binC[x] == '1') { dec += 64; } break;
+		case 2:	if (binC[x] == '1') { dec += 32; } break;
+		case 3:	if (binC[x] == '1') { dec += 16; } break;
+		case 4:	if (binC[x] == '1') { dec += 8; } break;
+		case 5:	if (binC[x] == '1') { dec += 4; } break;
+		case 6:	if (binC[x] == '1') { dec += 2; } break;
+		case 7:	if (binC[x] == '1') { dec += 1; } break;
+		default: printf("ERROR: 'binC()' => SWITCH-STATEMENT.\n"); 
+			break; }}
+	return dec; // written by Kanon >w< ;
+}

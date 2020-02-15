@@ -1,0 +1,85 @@
+import java.util.Scanner;
+public class asdf {
+	public static void main(String[] args) {
+		String input = "",convert = "";
+		int select = 0, count = 0, menu = 1;
+		char c;
+		Scanner scan = new Scanner(System.in);
+		
+		while (menu == 1) {
+			input = "";
+			convert = "";
+			select = 0;
+			
+			while (select < 1 || select > 3) {
+				System.out.println("* kText: Encrypt or Decrypt *");
+				System.out.println("1. Encrypt a message");
+				System.out.println("2. Decrypt a message");
+				System.out.println("3. Exit");
+				select = Integer.parseInt(scan.nextLine());
+			}
+			switch(select) {
+			case 1:
+				System.out.println("Input normal text to encrypt:");
+				input = scan.nextLine();
+				System.out.println("Encrypted kText:");
+				for (count = 0; count < input.length(); ++count) {
+					convert = (((int)input.charAt(count))+69) + "";
+					System.out.print(convert);
+					if (count+1 != input.length()) {
+						System.out.print(" ");
+					}
+				}
+				System.out.println();
+				System.out.println("DEC values for Text:");
+				for (count = 0; count < input.length(); ++count) {
+					convert = (int)input.charAt(count) + "";
+					System.out.print(convert);
+					if (count+1 != input.length()) {
+						System.out.print(" ");
+					}
+				}
+				System.out.println();
+				System.out.print("Continue? Y/N: ");
+				c = scan.nextLine().charAt(0);
+				if (c == 'y' || c == 'Y') {
+					continue;
+				} else {
+					menu = 0;
+					System.out.println("Exit confirmed.");
+				}
+				break;
+			case 2:
+				System.out.println("Input kText to decrypt:");
+				input = scan.nextLine();
+				input = input + " ";
+				System.out.println("Decrypted kText:");
+				for (count = 0; count < input.length();++count) {
+					if (input.charAt(count) != ' ') {
+						convert += input.charAt(count);
+					} else {
+						System.out.print((char)(Integer.parseInt(convert)-69));
+						convert = "";
+					}
+				}
+				System.out.println();
+				System.out.print("Continue? Y/N: ");
+				c = scan.nextLine().charAt(0);
+				if (c == 'y' || c == 'Y') {
+					continue;
+				} else {
+					menu = 0;
+					System.out.println("Exit confirmed.");
+				}
+				break;
+			case 3:
+				menu = 0;
+				System.out.println("Exit confirmed.");
+				break;
+			default:
+				System.out.println("How?");
+				break;
+			}
+		}
+	}
+}
